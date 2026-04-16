@@ -163,9 +163,7 @@ class _ProjectCard extends StatelessWidget {
                     decoration: BoxDecoration(
                       color: Colors.white.withOpacity(0.06),
                       borderRadius: BorderRadius.circular(20),
-                      border: Border.all(
-                        color: Colors.white.withOpacity(0.12),
-                      ),
+                      border: Border.all(color: Colors.white.withOpacity(0.12)),
                     ),
                     child: Text(
                       tag,
@@ -181,14 +179,16 @@ class _ProjectCard extends StatelessWidget {
           const SizedBox(height: 16),
 
           // Action buttons
-          Row(
+          Wrap(
+            spacing: 8,
+            runSpacing: 8,
             children: [
-              if (project.hasGithub) ...[
+              if (project.hasGithub)
                 _ActionButton(label: 'GitHub ↗', onTap: () {}),
-                const SizedBox(width: 8),
-              ],
-              if (project.hasDemo) _ActionButton(label: 'Live Demo', onTap: () {}),
-              if (project.hasFigma) _ActionButton(label: 'Figma ↗', onTap: () {}),
+              if (project.hasDemo)
+                _ActionButton(label: 'Live Demo', onTap: () {}),
+              if (project.hasFigma)
+                _ActionButton(label: 'Figma ↗', onTap: () {}),
             ],
           ),
         ],
