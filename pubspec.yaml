@@ -1,4 +1,4 @@
-name: portfolio
+name: Portfolio
 description: "Shikhar Bajpai - Flutter Portfolio App"
 publish_to: "none" 
 version: 1.0.0+1
@@ -21,6 +21,13 @@ dev_dependencies:
   flutter_test:
     sdk: flutter
   flutter_lints: ^6.0.0
+  flutter_launcher_icons: ^0.13.1
+
+flutter_icons:
+  android: true
+  ios: true
+  image_path: "assets/logo.png"
+
 flutter:
   
   uses-material-design: true
@@ -52,7 +59,6 @@ flutter:
     - assets/metro8.jpg
     - assets/metro9.jpg
     - assets/metro10.jpg
-  
-
+    - assets/logo.png
 
   
